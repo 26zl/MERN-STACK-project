@@ -1,0 +1,240 @@
+/* Author: Medlem 2, Laurent Zogaj, Medlem 3, Medlem 1& Medlem 4 */
+
+/* Tailwind CSS klasser */
+
+@import "tailwindcss";
+
+.hidden-lg {
+    @apply hidden lg:flex;
+}
+
+.block-sm-md {
+    @apply block sm:block md:block lg:hidden;
+}
+
+.grid {
+    @apply grid;
+}
+
+.grid-cols-1 {
+    @apply grid-cols-1;
+}
+
+.gap-4 {
+    @apply gap-4;
+}
+
+.grid-cols-2 {
+    @apply grid-cols-2;
+}
+
+.lg-grid-cols-2 {
+    @apply lg:grid-cols-2;
+}
+
+.lg-grid-cols-3 {
+    @apply lg:grid-cols-3;
+}
+
+.lg-grid-cols-6 {
+    @apply lg:grid-cols-6;
+}
+
+.md-grid-cols-2 {
+  @apply md:grid-cols-2;
+}
+
+.md-grid-cols-3 {
+    @apply md:grid-cols-3;
+}
+
+.grid-cols-2 {
+    @apply grid-cols-2;
+}
+
+.gap-6 {
+    @apply gap-6;
+}
+
+.md-w-180 {
+    @apply md:w-180;
+}
+
+/* Nyhet form 
+.nyhet-form {
+    @apply mt-8 sm:mx-auto sm:w-full sm:max-w-md form-container;
+}
+*/
+
+/* Medlemskap */
+/* Ytre container */
+.outer-wrapper {
+  @apply min-h-screen w-full bg-cover bg-center p-8 flex flex-col gap-8 pt-30;
+}
+
+@media (min-width: 760px) and (orientation: landscape) {
+  .outer-wrapper {
+    @apply flex-row justify-center items-start gap-10;
+  }
+}
+
+/* Venstre meny */
+.menu-box {
+  @apply bg-white shadow-xl rounded-2xl p-6 w-full;
+}
+
+@media (min-width: 760px) and (orientation: landscape) {
+  .menu-box {
+    @apply w-[350px] min-h-[700px] flex-shrink-0;
+  }
+}
+
+/* Hovedinnhold / Høyre meny */
+.content-box {
+  @apply bg-white shadow-xl rounded-2xl p-6 w-full;
+}
+
+@media (min-width: 767px) and (orientation: landscape) {
+  .content-box {
+    @apply w-[900px] min-h-[700px] flex-none;
+  }
+}
+
+/* Klasser for brukeradministrasjon (probably midlertidig) */
+.custom-blue {
+  background-color: #3b82f6; /* Blå bakgrunn */
+  color: white; /* Hvit tekst */
+  padding: 0.25rem 0.5rem; /* px-2 py-1 tilsvarer 0.25rem topp/bunn og 0.5rem venstre/høyre */
+  border-radius: 0.25rem; /* rounded */
+  font-size: 1rem; /* Standard fontstørrelse */
+  cursor: pointer; /* Håndpeker ved hover */
+}
+
+.custom-blue:hover {
+  background-color: #2563eb; /* Mørkere blå ved hover */
+}
+
+@media (min-width: 1024px) {
+  .bane-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem; /* tilsvarer Tailwind's gap-6 */
+  }
+
+  .bane-left,
+  .bane-right {
+    width: 50%;
+  }
+
+  .bane-right .sticky {
+    position: sticky;
+    top: 1.5rem; 
+  }
+}
+
+@media (max-width: 1023px) {
+  .bane-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bane-left,
+  .bane-right {
+    width: 100%;
+  }
+
+ 
+  /*.bane-right {
+    order: -1;
+    position: sticky;
+    top: 0; 
+    z-index: 10; 
+  }
+
+ 
+  .bane-right {
+    height: auto;
+    max-height: 80vh; 
+  }*/
+
+
+  .star-yellow {
+    @apply text-yellow-500;
+  }
+  .star-gray {
+    @apply text-gray-300;
+  }
+  
+}
+
+
+.filter-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .filter-controls {
+    flex-direction: row;
+  }
+}
+
+.filter-controls label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.filter-controls select {
+  width: 100%;
+  padding: 0.625rem;
+  background-color: white;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  font-size: 1rem;
+}
+
+.filter-controls select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.near-filter .flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.near-filter select {
+  width: 33%;
+}
+
+.near-filter button {
+  width: 66%;
+  padding: 0.625rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  transition: background-color 0.2s ease;
+}
+
+.near-filter button:hover {
+  background-color: #f3f4f6;
+}
+
+.near-filter .active {
+  background-color: #2563eb;
+  color: white;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.near-filter .active:hover {
+  background-color: #1d4ed8;
+}
